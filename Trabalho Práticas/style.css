@@ -20,7 +20,7 @@ header{
     border: 2px solid #313330;
     position:absolute;
     top:65px;
-    left:520px;
+    left:620px;
     height:40px;
     width:350px;
     background-color: #a59e82;
@@ -48,8 +48,8 @@ header{
 }
 
 nav{
-    margin-left: 165px;
     margin-top: -65px;
+    text-align: center;
 }
 
 p{
@@ -86,7 +86,7 @@ body{
 #slider img{
     opacity: 0;
     position: absolute;
-    width: 1283px;
+    width: 175%;
     height: 290px;
 
     margin-left: 30px;
@@ -100,10 +100,15 @@ body{
     opacity: 1;
 }
 
-#produtos{
-    max-width: 900px;
-    padding:0 2%;
-    display: flex;
+.produtos{
+    display: none;
+}
+
+.menu-closer{
+    width: 32px;
+    height: 32px;
+    display: none;
+    font-size: 30px;
 }
 
 .produto-single{
@@ -116,11 +121,6 @@ body{
     height: 180px;
     padding: 6px;
     border-radius: 15px;
-}
-
-.produtos{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
 }
 
 .menu-closer{
@@ -175,6 +175,7 @@ h1{
 .produtos-items-img img{
     width: 100%;
     height: auto;
+    border-radius: 40px;
 }
 
 .produtos-items-add{
@@ -603,7 +604,7 @@ footer{
     border: 1px solid #a59e82;
     width: 225px;
     text-align: center;
-    margin-left: 300px;
+    margin-left: 420px;
 }
 
 #fale p{
@@ -614,7 +615,7 @@ footer{
     border: 1px solid #a59e82;
     width: 220px;
     text-align: center;
-    margin-left: 305px;
+    margin-left: 400px;
 }
 
 #formas p{
