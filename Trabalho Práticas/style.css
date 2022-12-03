@@ -199,13 +199,13 @@ aside.show{
 
 /*Janela model-----------------------------------------------------------------------------------------------------*/
 
-.modelsWindowArea{
+.modelsWindowsArea{
     position: fixed;
     left: 0;
     top: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(255, 238, 238, 0.1);
+    background-color: rgba(255, 255, 255, 0.5);
     display: none;
     transition: all ease .5s;
     justify-content: center;
@@ -213,13 +213,293 @@ aside.show{
     overflow: auto;
 }
 
-.modelsWindowBody{
+.modelsWindowsBody{
     width: 900px;
     background-color: #FFF;
     border-radius: 20px;
     box-shadow: 0px 0px 15px #999;
     display: flex;
     margin: 20px 0;
+}
+
+.modelsBig{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modelsBig--back{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+}
+
+.modelsBig img{
+    height: 400px;
+    width: auto;
+}
+
+.modelsInfo{
+    flex: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 50px;
+}
+
+.modelsInfo h1{
+    margin-top: 50px;
+}
+
+.modelsInfo .modelsInfo--desc{
+    font-size: 15px;
+    color: #999;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.modelsInfo--sector{
+    color: #CCC;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.modelsInfo--price{
+    display: flex;
+    align-items: center;
+}
+
+.modelsInfo--atualprice{
+    font-size: 28px;
+    margin-right: 30px;
+}
+
+.modelsInfo--qtdarea{
+    display: inline-flex;
+    background-color: #EEE;
+    border-radius: 10px;
+    height: 30px;
+}
+
+.modelsInfo--qtdarea button{
+    border: 0;
+    background-color: transparent;
+    font-size: 17px;
+    outline: 0;
+    cursor: pointer;
+    padding: 0 10px;
+    color: #333;
+}
+
+.modelsInfo--qtd{
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0 5px;
+    color: #000;
+}
+
+.modelsInfo--addButton{
+    margin-top: 30px;
+    padding: 20px 30px;
+    border-radius: 20px;
+    background-color: #4BD85F;
+    color: #FFF;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.modelsInfo--addButton:hover{
+    background-color: #32A345;
+}
+
+.modelsInfo--cancelButton{
+    display: inline-block;
+    cursor: pointer;
+}
+
+.modelsInfo--cancelMobileButton{
+    display: none;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.cart{
+    margin-bottom: 20px;
+}
+
+.cart-item{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.cart-item img{
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+.cart-item-nome{
+    flex: 1;
+}
+
+.cart-item-qtd{
+    display: inline-flex;
+    background-color: #EEE;
+    border-radius: 10px;
+    height: 30px;
+}
+
+.cart-item-qtd button{
+    border: 0;
+    background-color: transparent;
+    font-size: 17px;
+    outline: 0;
+    cursor: pointer;
+    padding: 0 10px;
+    color: #333;
+}
+
+.cart-item-qt{
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0 5px;
+    color: #000;
+}
+
+.cart-totalitems{
+    padding: 15px 0;
+    border-top:  1px solid #79B9DD;
+    color: #315978;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.cart-totalitems span:first-child{
+    font-weight: bold;
+}
+
+.cart-totalitems.big {
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+}
+
+.cart-finalizar{
+    padding: 20px 30px;
+    border-radius: 20px;
+    background-color: #48D05F;
+    color: #FFF;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+    border: 2px solid #63F77C;
+    transition: all ease .2s;
+}
+
+.cart-finalizar:hover{
+    background-color: #35AF4A;
+}
+
+@media (max-width:1000px){
+    .produtos-area {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:840px){
+    body{
+        flex-direction: column;
+    }
+
+    .produtos-area{
+        display: block;
+    }
+
+    .produtos-items{
+        max-width: 100%;
+    }
+
+    aside{
+        width: auto;
+        position: fixed;
+        left: 100vw;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transition: all ease .2s;
+    }
+
+    aside.show{
+        width: auto;
+    }
+
+    .cart-area{
+        width: 100vw;
+    }
+
+    .menu-closer{
+        display: block;
+    }
+
+    .modelsWindowsArea{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .modelsWindowsBody{
+        width: 100vw;
+        display: block;
+        padding: 20px;
+        border-radius: 0;
+        box-shadow: none;
+        margin: 0;
+    }
+
+    .modelsBig img{
+        width: 75%;
+        height: auto;
+    }
+
+    .modelsInfo h1{
+        margin-top: 20px;
+    }
+
+    .modelsInfo--qtdarea{
+        height: 60px;
+    }
+
+    .modelsInfo--qtdarea button{
+        font-size: 25px;
+        padding: 0 25px;
+    }
+
+    .modelsInfo--qtd{
+        line-height: 60px;
+        font-size: 20px;
+    }
+
+    .modelsInfo--addButton{
+        font-size: 20px;
+        display: block;
+        text-align: center;
+        margin: 30px auto;
+    }
+    .modelsInfo--cancelButton{
+        display: none;
+    }
+
+    .modelsInfo--cancelMobileButton{
+        display: block;
+    }
 }
 
 /*site de cadastro -------------------------------------------------------------------------------------------------*/
