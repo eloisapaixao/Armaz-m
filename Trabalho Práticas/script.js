@@ -35,7 +35,7 @@ let modelsJson = [
 ];
 
 let cart = []
-let modalQt;
+let modalQt
 let key = 0
 const c = (el) => document.querySelector(el)
 const cs = (el) => document.querySelectorAll(el)
@@ -93,9 +93,85 @@ c('.modelsInfo--qtdmais').addEventListener('click', ()=>{
 })
 
 c('.modelsInfo--addButton').addEventListener('click', () => {
-    cart.push({
-        id:modelsJson[key].id,
-        qt:modalQt
-    })
+    let identifier = modelsJson[key].id+'@'
+    let localId = cart.findIndex((item) => item.identifier == identifier)
+    if (localId > -1)
+    {
+        cart[localId].qt += modalQt
+    }
+    else
+    {
+        cart.push({
+            identifier,
+            id:modelsJson[key].id,
+            qt:modalQt
+        })    
+    }
+    updateCart()
     closeModal()
 })
+
+function carrinho(){
+    if(cart.length > 0){
+        c('aside').style.left = '0'
+    }
+}
+
+c('.menu-closer').addEventListener('click', () => {
+    c('aside').style.left = '100vw'
+})
+
+c('.cart-finalizar').addEventListener('click', () => {
+    cart = []
+    updateCart()
+})
+
+function updateCart(){
+    if(cart.length > 0){
+        c('aside').classList.add('show')
+        c('.cart').innerHTML = ''
+        let subtotal = 0
+        let desconto = 0
+        let total = 0
+        cart.map((itemCart, index) => {
+            let modelItem = modelsJson.find((itemBD) => itemBD.id == itemCart.id)
+            subtotal += modelItem.price * itemCart.qt
+            
+            let cartItem = c('.produtos .cart-item').cloneNode(true)
+            cartItem.querySelector('img').src = modelItem.img
+            cartItem.querySelector('.cart-item-nome').innerHTML = modelItem.name
+            cartItem.querySelector('.cart-item-qtd').innerHTML = itemCart.qt
+            // cartItem.querySelector('.cart-item-qtdmenos').addEventListener('click', () => {
+            //     if(itemCart.qt > 1)
+            //     {
+            //         itemCart.qt--
+            //     }
+            //     else
+            //     {
+            //         cart.splice(index, 1)
+            //     }
+            //     updateCart()
+            // })
+            // cartItem.querySelector('.cart-item-qtdmais').addEventListener('click', () => {
+            //    itemCart.qt++
+            //    updateCart()
+            // })
+
+            c('.cart').append(cartItem)
+        })
+        desconto = subtotal * 0.1
+        total = subtotal - desconto
+        c('.subtotal span:last-child').innerHTML = `R$ ${subtotal.toFixed(2)}`
+        c('.desconto span:last-child').innerHTML = `R$ ${desconto.toFixed(2)}`
+        c('.total span:last-child').innerHTML = `R$ ${total.toFixed(2)}`
+    }
+    else
+    {
+        c('aside').classList.remove('show')
+        c('aside').style.left = '100vw'
+    }
+}
+
+function cadastrar(){
+    c('.cadastrar').classList.add('show')
+}
