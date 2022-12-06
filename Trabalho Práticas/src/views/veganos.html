@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foodtasty</title>
+    <link rel="shortcut icon" href="foodtasty.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header> <!--Cabeçalho da página-->
+        <a href="sitePrincipal.html"><img src="/public/imagens/foodtasty.png" id="img"></a>
+
+        <input type="text" id="pesquisa" name="pequisa" placeholder="O que voce procura?">
+
+        <a href="#"><button><img src="/public/imagens/carrinho-de-compras (1).png" id="imgInterface"></button></a>
+        <a href="cadastro.html"><button><img src="/public/imagens/do-utilizador.png" id="imgInterface2"></button></a>
+        
+        <nav>
+            <ul id="menu">
+                <li><a href="sitePrincipal.html"><strong>TODOS</strong></a></li>
+                <li><a href="veganos.html"><strong>VEGANOS</strong></a></li>
+                <li><a href="semGluten.html"><strong>SEM GLÚTEN</strong></a></li>
+                <li><a href="semLactose.html"><strong>SEM LACTOSE</strong></a></li>
+                <li><a href="vegetais.html"><strong>VEGETAIS</strong></a></li>
+                <li><a href="doces.html"><strong>DOCES</strong></a></li>
+                <li><a href="carboidratos.html"><strong>CARBOIDRATOS</strong></a></li>
+            </ul>
+        </nav>
+        <p>_______________________________________________________________________________________________________________________________________________________________________________________________</p>
+    </header>
+
+    <div id="slider">
+        <img class="selected" src="/public/imagens/propaganda1.png">
+        <img src="/public/imagens/propaganda2.png">
+        <img src="/public/imagens/propaganda3.png">
+    </div>
+
+    <div class="produtos">
+        <div class="produtos-items">
+            <a href="">
+                <div class="produtos-items-img">
+                    <img src="" />
+                </div>
+                <div class="produtos-items-add">+</div>
+            </a>
+            <div class="produtos-items-price">R$ --</div>
+            <div class="produtos-items-name">--</div>
+            <div class="produtos-items-desc">--</div>
+        </div>
+        <div class="cart-item">
+            <img src="" />
+            <div class="cart-item-nome">--</div>
+            <div class="cart-item-qtd">
+                <button class="cart-item-qtdmenos">-</button>
+                <div class="cart-item-qt">1</div>
+                <button class="cart-item-qtdmais">+</button>
+            </div>
+        </div>
+    </div>
+    
+    <main>
+        <div class="produtos-area"></div>
+    </main>
+    
+    <!--Área do carrinho-->
+    <aside>
+        <div class="cart-area">
+            <div class="menu-closer">
+                <img src="cruz.png"/>
+            </div>
+            <h1>Seus Produtos</h1>
+            <div class="cart"></div>
+            <div class="cart-details">
+                <div class="cart-totalitems   subtotal">
+                    <span>Subtotal</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart-totalitems  desconto">
+                    <span>Desconto (-10%)</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart-totalitems total big">
+                    <span>Total</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart-finalizar">Finalizar a compra</div>
+            </div>
+        </div>
+    </aside>
+
+    <!--Model window, janela dos produtos-->
+    <div class="modelsWindowsArea">
+        <div class="modelsWindowsBody">
+            <div class="modelsInfo--cancelMobileButton">Voltar</div>
+            <div class="modelsBig">
+                <img src="" />
+            </div>
+            <div class="modelsInfo">
+                <h1>--</h1>
+                <div class="modelsInfo--desc">--</div>
+            </div>
+            <div class="modelsInfo--pricearea">
+                <div class="modelsInfo--sector">Preço</div>
+                <div class="modelsInfo--price">
+                    <div class="modelsInfo--atualprice">R$ --</div>
+                    <div class="modelsInfo--qtdarea">
+                        <button class="modelsInfo--qtdmenos">-</button>
+                        <div class="modelsInfo--qtd">1</div>
+                        <button class="modelsInfo--qtdmais">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modelsInfo--addButton">Adicionar ao carrinho</div>
+            <div class="modelsInfo--cancelButton">Cancelar</div>
+        </div>
+    </div>
+
+    <p>_______________________________________________________________________________________________________________________________________________________________________________________________</p>
+    <footer>
+        <div id="quem">
+            <div id="foot2"> Quem somos nós?</div>
+            <p>Nossa empresa foi criada </p>
+            <p>com o intuito de aumentar o </p> 
+            <p>mercado de produtos</p>  
+            <p>ôrganicos além de incluir as</p> 
+            <p>pessoas com problemas de saúde</p>
+            <p> e precisam de alimentos mais</p> 
+            <p>saudáveis e nutritivos.</p>
+        </div>
+
+        <div id="fale">
+            <div id="foot"> Fale com a gente</div>
+            <p>
+                <img src="chamada-telefonica.png" id="contatos"> (19) 99765-4332
+            </p>
+            <p>
+                <img src="whatsapp.png" id="contatos"> (19) 99534-7865
+            </p>
+            <p>
+                <img src="envelope.png" id="contatos"> foodtasty@gmail.com
+            </p>
+            <p>
+                <img src="instagram.png" id="contatos"> @food_tasty
+            </p>
+            <p>
+                <img src="facebook.png" id="contatos"> Food Tasty - Armazém
+            </p>
+        </div>
+
+        <div id="formas">
+            <div id="foot"> Formas de pagamento</div>
+            <p>
+                <img src="pix.png" id="pagamento"> (19) 99765-4332
+            </p>
+
+            <p>
+                <img src="visa.png" id="pagamento">  
+            </p>
+
+            <p>
+                <img src="ourocard.png" id="pagamento"> 
+            </p>
+
+            <p>
+                <img src="elo.png" id="pagamento"> 
+            </p>
+
+            <p>
+                <img src="mastercard.png" id="pagamento"> 
+            </p>
+        </div>
+    </footer>
+
+    <script src="veganos.js"></script>
+
+</body>
+</html>
