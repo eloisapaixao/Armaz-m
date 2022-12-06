@@ -9,7 +9,7 @@ router.get('/carboidratos', controller.carboidratos)
 router.get('/semGluten', controller.semGluten)
 router.get('/semLactose', controller.semLactose)
 router.get('/veganos', controller.veganos)
-router.get('/vegetais', controller.vegatais)
+router.get('/vegetais', controller.vegetais)
 
 router.post('/usuarios/entrar', controller.entrarUsuario)
 router.post('/usuarios/registrar',controller.registrarUsuario)

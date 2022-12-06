@@ -3,6 +3,8 @@ let time = 5000,
     images = document.querySelectorAll("#slider img")
     max = images.length
 
+// document.querySelector('#imgInterface').addEventListener('click', () => c('aside').classList.toggle('show'))\
+
 function nextImage(){
 
     images[currentImageIndex].classList.remove("selected")
@@ -24,17 +26,17 @@ function start(){
 window.addEventListener("load", start())
 
 let modelsJson = [
-    {id:1, name:'Aspargos', img:'/public/imagens/aspargos.jpg', price:[100.00, 150.00, 200.00], description:'Apargos frescos'},
-    {id:13, name:'Beterraba', img:'/public/imagens/beterraba.jpg', price:[100.00, 150.00, 200.00], description:'Beterraba fresca'},
-    {id:14, name:'Brocolis', img:'/public/imagens/brocolis.jpg', price:[100.00, 150.00, 200.00], description:'Brocolis fresco'},
-    {id:23, name:'Cenoura', img:'/public/imagens/cenoura.png', price:[100.00, 150.00, 200.00], description:'Cenoura fresca'},
-    {id:24, name:'Chia mãe terra', img:'/public/imagens/chia mae terra.jpg', price:[100.00, 150.00, 200.00], description:'Chia mãe terra, pacote 100g, 100% integral, orgânica'},
-    {id:35, name:'Couve', img:'/public/imagens/couve.jpg', price:[100.00, 150.00, 200.00], description:'Couve fresca'},
-    {id:36, name:'Espinafre', img:'/public/imagens/espinafre.jpg', price:[100.00, 150.00, 200.00], description:'Espinafre fresco'},
-    {id:73, name:'Palmito espaguete ACM', img:'/public/imagens/palmito espaguete ACM.jpg', price:[100.00, 150.00, 200.00], description:'Palmito espaguete 300g'},
-    {id:74, name:'Pepino', img:'/public/imagens/pepino.jpg', price:[100.00, 150.00, 200.00], description:'Pepino fresco'},
-    {id:75, name:'Pimentão verde', img:'/public/imagens/pimentaoverde.jpg', price:[100.00, 150.00, 200.00], description:'Pimentão verde fresco'},
-    {id:84, name:'Tomate', img:'/public/imagens/tomate.jpg', price:[100.00, 150.00, 200.00], description:'Tomate fresco'}
+    {id:1, name:'Aspargos', img:'/imagens/aspargos.jpg', price:[100.00, 150.00, 200.00], description:'Apargos frescos'},
+    {id:13, name:'Beterraba', img:'/imagens/beterraba.jpg', price:[100.00, 150.00, 200.00], description:'Beterraba fresca'},
+    {id:14, name:'Brocolis', img:'/imagens/brocolis.jpg', price:[100.00, 150.00, 200.00], description:'Brocolis fresco'},
+    {id:23, name:'Cenoura', img:'/imagens/cenoura.png', price:[100.00, 150.00, 200.00], description:'Cenoura fresca'},
+    {id:24, name:'Chia mãe terra', img:'/imagens/chia mae terra.jpg', price:[100.00, 150.00, 200.00], description:'Chia mãe terra, pacote 100g, 100% integral, orgânica'},
+    {id:35, name:'Couve', img:'/imagens/couve.jpg', price:[100.00, 150.00, 200.00], description:'Couve fresca'},
+    {id:36, name:'Espinafre', img:'/imagens/espinafre.jpg', price:[100.00, 150.00, 200.00], description:'Espinafre fresco'},
+    {id:73, name:'Palmito espaguete ACM', img:'/imagens/palmito espaguete ACM.jpg', price:[100.00, 150.00, 200.00], description:'Palmito espaguete 300g'},
+    {id:74, name:'Pepino', img:'/imagens/pepino.jpg', price:[100.00, 150.00, 200.00], description:'Pepino fresco'},
+    {id:75, name:'Pimentão verde', img:'/imagens/pimentaoverde.jpg', price:[100.00, 150.00, 200.00], description:'Pimentão verde fresco'},
+    {id:84, name:'Tomate', img:'/imagens/tomate.jpg', price:[100.00, 150.00, 200.00], description:'Tomate fresco'}
 ];
 
 let cart = []

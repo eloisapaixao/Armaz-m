@@ -3,6 +3,8 @@ let time = 5000,
     images = document.querySelectorAll("#slider img")
     max = images.length
 
+// document.querySelector('#imgInterface').addEventListener('click', () => c('aside').classList.toggle('show'))
+
 function nextImage(){
 
     images[currentImageIndex].classList.remove("selected")
@@ -24,17 +26,17 @@ function start(){
 window.addEventListener("load", start())
 
 let modelsJson = [
-    {id:16, name:'Cacau em pó Dr.Oetker', img:'/public/imagens/cacau em po dr.oetker.png', price:[100.00, 150.00, 200.00], description:'Cacau em pó solúvel, 100% cacau, 150g'},
-    {id:17, name:'Cacau em pó Nestlé', img:'/public/imagens/cacau em po nestle.png', price:[100.00, 150.00, 200.00], description:'Cacau em pó 100% cacau, 200g, dois frades'},
-    {id:25, name:'Chocolate amargo Hersheys', img:'/public/imagens/chocolate amargo hersheys.png', price:[100.00, 150.00, 200.00], description:'Chocolate amargo 40%, 92g'},
-    {id:26, name:'Chocolate ao leite Lacta', img:'/public/imagens/chocolate ao leite lacta.png', price:[100.00, 150.00, 200.00], description:'Chocolate ao leite 92g'},
-    {id:27, name:'Chocolate ao leite Nestlé', img:'/public/imagens/chocolate ao leite nestle.png', price:[100.00, 150.00, 200.00], description:'Chocolate ao leite 90g'},
-    {id:28, name:'Chocolate meio amargo Nestlé', img:'/public/imagens/chocolate meio amargo nestle.png', price:[100.00, 150.00, 200.00], description:'Chocolate meio amargo 40%'},
-    {id:29, name:'Chocolate Nugali', img:'/public/imagens/chocolate nugali.png', price:[100.00, 150.00, 200.00], description:'Chocolate sem glúten ao leite, 45%, 100g'},
-    {id:30, name:'Chocolate Zeromilk', img:'/public/imagens/chocolate zeromilk.jpg', price:[100.00, 150.00, 200.00], description:'Chocolate 0% lactose,glúten e soja, 80g'},
-    {id:67, name:'Pasta de amendoim com chocolate branco', img:'/public/imagens/Pasta de amendoim chocolate branco.jpg', price:[100.00, 150.00, 200.00], description:'Pasta de amendoim com chocolate branco, sem adição de açúcar, contém glúten, 150g'},
-    {id:68, name:'Pasta de amendoim com cookies de chocolate', img:'/public/imagens/Pasta de amendoim cookies de chocolate.png', price:[100.00, 150.00, 200.00], description:'Pasta de amendoim com cookies de chocolate, contém glúten, 450g'},
-    {id:69, name:'Pasta de amendoim sabor wafer de chocolate', img:'/public/imagens/naked nuts wafer de chocolate.png', price:[100.00, 150.00, 200.00], description:'Pasta de amendoim sabor wafer de chocolate, não contém glúten, 450g'}
+    {id:16, name:'Cacau em pó Dr.Oetker', img:'/imagens/cacau em po dr.oetker.png', price:[100.00, 150.00, 200.00], description:'Cacau em pó solúvel, 100% cacau, 150g'},
+    {id:17, name:'Cacau em pó Nestlé', img:'/imagens/cacau em po nestle.png', price:[100.00, 150.00, 200.00], description:'Cacau em pó 100% cacau, 200g, dois frades'},
+    {id:25, name:'Chocolate amargo Hersheys', img:'/imagens/chocolate amargo hersheys.png', price:[100.00, 150.00, 200.00], description:'Chocolate amargo 40%, 92g'},
+    {id:26, name:'Chocolate ao leite Lacta', img:'/imagens/chocolate ao leite lacta.png', price:[100.00, 150.00, 200.00], description:'Chocolate ao leite 92g'},
+    {id:27, name:'Chocolate ao leite Nestlé', img:'/imagens/chocolate ao leite nestle.png', price:[100.00, 150.00, 200.00], description:'Chocolate ao leite 90g'},
+    {id:28, name:'Chocolate meio amargo Nestlé', img:'/imagens/chocolate meio amargo nestle.png', price:[100.00, 150.00, 200.00], description:'Chocolate meio amargo 40%'},
+    {id:29, name:'Chocolate Nugali', img:'/imagens/chocolate nugali.png', price:[100.00, 150.00, 200.00], description:'Chocolate sem glúten ao leite, 45%, 100g'},
+    {id:30, name:'Chocolate Zeromilk', img:'/imagens/chocolate zeromilk.jpg', price:[100.00, 150.00, 200.00], description:'Chocolate 0% lactose,glúten e soja, 80g'},
+    {id:67, name:'Pasta de amendoim com chocolate branco', img:'/imagens/Pasta de amendoim chocolate branco.jpg', price:[100.00, 150.00, 200.00], description:'Pasta de amendoim com chocolate branco, sem adição de açúcar, contém glúten, 150g'},
+    {id:68, name:'Pasta de amendoim com cookies de chocolate', img:'/imagens/Pasta de amendoim cookies de chocolate.png', price:[100.00, 150.00, 200.00], description:'Pasta de amendoim com cookies de chocolate, contém glúten, 450g'},
+    {id:69, name:'Pasta de amendoim sabor wafer de chocolate', img:'/imagens/naked nuts wafer de chocolate.png', price:[100.00, 150.00, 200.00], description:'Pasta de amendoim sabor wafer de chocolate, não contém glúten, 450g'}
 ];
 
 let cart = []

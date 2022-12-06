@@ -36,15 +36,31 @@ exports.vegetais = ('/vegetais', (requisicao, resposta) => {
 })
 
 exports.registrarUsuario = ('/usuarios/registrar', async (requisicao, resposta) => {
-    let username = requisicao.body.username
-    let email = requisicao.body.email
-    let usuario = new Users({ username, email })
+    console.log(requisicao.body)
+
+    const usuario = new Users(requisicao.body)
 
     try {
         await usuario.save()
-        return resposta.redirect('/sitePrincipal')
+        return resposta.status(201).send({ mensagem: 'Usuário criado' })
     }
     catch (err) {
         next(err)
     }
 })
+
+exports.entrarUsuario = ('/usuarios/entrar', async (requisicao, resposta) => {
+    let email = requisicao.body.email
+    let senha = requisicao.body.senha
+
+    Users.findOne({ email }, (erro, usuario) => {
+        if (erro)
+            return resposta.status(500).send({ erro: 'Erro ao consultar usuário' })
+
+        if (usuario.senha === senha)
+            return resposta.status(200).send({ mensagem: 'Usuário autenticado' })
+
+        return resposta.status(401).send({ mensagem: 'Usuário não autenticado' })
+    })
+})
+

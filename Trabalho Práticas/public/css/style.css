@@ -118,20 +118,39 @@ header{
 }
 
 aside{
-    background-color: #9CCBE6;
+    background-color: #d4b98f;
     width: 0vw;
     font-family: Arial, Helvetica, sans-serif;
     transition: all ease .2s;
     overflow-x: hidden;
+    overflow-y: auto;
     float: right;
+    height: 100%;
 }
 
 aside.show{
     width: 30vw;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .cart-area{
+    margin-top: 100px;
     padding: 20px;
+    bottom: 0;
+    position: center;
+}
+
+#ParentModal 
+{
+    bottom: 0px;
+}
+
+#Cadastros
+{
+    display: flex;
+    flex-direction: row;
 }
 
 main{
@@ -226,12 +245,13 @@ main{
 }
 
 .modelsWindowsBody{
-    width: 900px;
-    background-color: #FFF;
+    width: 600px;
+    height:800px;
+    background-color: #d4b98f;
     border-radius: 20px;
     box-shadow: 0px 0px 15px #999;
-    display: flex;
-    margin: 20px 0;
+    display: block;
+    margin: 20px 10px;
 }
 
 .modelsBig{
@@ -257,6 +277,8 @@ main{
     flex: 1;
     font-family: Arial, Helvetica, sans-serif;
     padding-bottom: 50px;
+    align-items: center;
+    text-align: center;
 }
 
 .modelsInfo h1{
@@ -265,13 +287,15 @@ main{
 
 .modelsInfo .modelsInfo--desc{
     font-size: 15px;
-    color: #999;
+    color: #000;
     margin-top: 10px;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    align-items: center;
 }
 
 .modelsInfo--sector{
-    color: #CCC;
+    color: #000;
     text-transform: uppercase;
     font-size: 14px;
     margin-top: 30px;
@@ -317,15 +341,16 @@ main{
     margin-top: 30px;
     padding: 20px 30px;
     border-radius: 20px;
-    background-color: #4BD85F;
+    background-color: #d4a867;
     color: #FFF;
+    height:fit-content;
     display: inline-block;
     cursor: pointer;
     margin-right: 30px;
 }
 
 .modelsInfo--addButton:hover{
-    background-color: #32A345;
+    background-color: #bb7710;
 }
 
 .modelsInfo--cancelButton{
@@ -339,10 +364,13 @@ main{
     text-align: center;
     line-height: 40px;
     margin-bottom: 30px;
+
 }
+
 
 .cart{
     margin-bottom: 20px;
+    height:fit-content;
 }
 
 .cart-item{
@@ -363,7 +391,7 @@ main{
 
 .cart-item-qtd{
     display: inline-flex;
-    background-color: #EEE;
+    background-color: #d4a867;
     border-radius: 10px;
     height: 30px;
 }
@@ -408,17 +436,17 @@ main{
 .cart-finalizar{
     padding: 20px 30px;
     border-radius: 20px;
-    background-color: #48D05F;
+    background-color: #d4a867;
     color: #FFF;
     cursor: pointer;
     text-align: center;
     margin-top: 20px;
-    border: 2px solid #63F77C;
+    border: 2px solid #d4a867;
     transition: all ease .2s;
 }
 
 .cart-finalizar:hover{
-    background-color: #35AF4A;
+    background-color: #be8733;
 }
 
 @media (max-width:1000px){
@@ -456,6 +484,7 @@ main{
         top: 0;
         bottom: 0;
         transition: all ease .2s;
+        background-color: red;
     }
 
     aside.show{
@@ -552,7 +581,7 @@ h2{
     margin-left: 8px;
 }
 
-#txt1{
+#txt1, #txt2 {
     margin-left: 20px;
     width: 310px;
     height: 30px;
@@ -573,12 +602,12 @@ h2{
 #cadastrar{
     background-color:  rgb(225, 224, 224);
     width: 350px;
-    margin-left: 150px;
+    margin-left: 30%;
     margin-top: -30px;
     padding: 10px;
     height: 500px;
     margin-bottom: 10px;
-    /*display: none;*/
+    position: relative;
 }
 
 #cadastrar p{
@@ -638,11 +667,6 @@ h2{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
 }
-
-#login{
-    display: inline-block;
-}
-
 
 /*rodapé----------------------------------------------------------------------------------------------------------*/
 
@@ -710,4 +734,10 @@ footer{
     margin-top: 0.5px;
     width: 30px;
     height: 30px;
+}
+
+.Parent
+{
+    display: flex;
+    flex-direction: row;
 }

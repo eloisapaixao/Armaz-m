@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foodtasty</title>
+    <link rel="shortcut icon" href="foodtasty.png">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header> <!--Cabeçalho da página-->
+        <a href="/"><img src="/imagens/foodtasty.png" id="img"></a>
+
+        <input type="text" id="pesquisa" name="pequisa" placeholder="O que voce procura?">
+
+        <button onclick="c('aside').classList.toggle('show')"><img src="/imagens/carrinho-de-compras (1).png" id="imgInterface"></button>
+        <a href="cadastro"><img src="/imagens/do-utilizador.png" id="imgInterface2"></a>
+        
+        <nav>
+            <ul id="menu">
+                <li><a href="/"><strong>TODOS</strong></a></li>
+                <li><a href="veganos"><strong>VEGANOS</strong></a></li>
+                <li><a href="semGluten"><strong>SEM GLÚTEN</strong></a></li>
+                <li><a href="semLactose"><strong>SEM LACTOSE</strong></a></li>
+                <li><a href="vegetais"><strong>VEGETAIS</strong></a></li>
+                <li><a href="doces"><strong>DOCES</strong></a></li>
+                <li><a href="carboidratos"><strong>CARBOIDRATOS</strong></a></li>
+            </ul>
+        </nav>
+        <p>_______________________________________________________________________________________________________________________________________________________________________________________________</p>
+    </header>
+
+    <!--Corpo da página-------------------------------------------------------------------------------------------->
+    <div id="slider">
+        <img class="selected" src="/imagens/propaganda chocolate.png">
+        <img src="/imagens/propaganda mãe terra.png">
+        <img src="/imagens/PROPAGANDA NAKED NUTS.png">
+    </div>
+
+    <div class="Parent">
+
+        <!--Descrição dos produtos-->
+        <div class="produtos">
+            <div class="produtos-items">
+                <a href="">
+                    <div class="produtos-items-img">
+                        <img src="/imagens/" />
+                    </div>
+                    <div class="produtos-items-add">+</div>
+                </a>
+                <div class="produtos-items-price">R$ --</div>
+                <div class="produtos-items-name">--</div>
+                <div class="produtos-items-desc">--</div>
+            </div>
+            <div class="cart-item">
+                <img src="/imagens/" />
+                <div class="cart-item-nome">--</div>
+                <div class="cart-item-qtd">
+                    <button class="cart-item-qtdmenos">-</button>
+                    <div class="cart-item-qt">1</div>
+                    <button class="cart-item-qtdmais">+</button>
+                </div>
+            </div>
+        </div>
+        
+        <main>
+            <div class="produtos-area"></div>
+        </main>
+        
+        <!--Área do carrinho-->
+        <aside>
+            <div class="cart-area">
+                <div id="ParentModal">
+                    <div class="menu-closer">
+                        <img src="/imagens/cruz.png"/>
+                    </div>
+                    <h1>Seus Produtos</h1>
+                    <div class="cart"></div>
+                    <div class="cart-details">
+                        <div class="cart-totalitems   subtotal">
+                            <span>Subtotal</span>
+                            <span>R$ --</span>
+                        </div>
+                        <div class="cart-totalitems  desconto">
+                            <span>Desconto (-10%)</span>
+                            <span>R$ --</span>
+                        </div>
+                        <div class="cart-totalitems total big">
+                            <span>Total</span>
+                            <span>R$ --</span>
+                        </div>
+                        <div class="cart-finalizar">Finalizar a compra</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        </div>
+    <!--Model window, janela dos produtos-->
+    <div class="modelsWindowsArea">
+        <div class="modelsWindowsBody">
+            <div class="modelsInfo--cancelMobileButton">Voltar</div>
+            <div class="modelsBig">
+                <img src="/imagens/" />
+            </div>
+            <div class="modelsInfo">
+                <h1>--</h1>
+                <div class="modelsInfo--desc">--</div>
+            </div>
+            <div class="modelsInfo--pricearea">
+                <div class="modelsInfo--sector">Preço</div>
+                <div class="modelsInfo--price">
+                    <div class="modelsInfo--atualprice">R$ --</div>
+                    <div class="modelsInfo--qtdarea">
+                        <button class="modelsInfo--qtdmenos">-</button>
+                        <div class="modelsInfo--qtd">1</div>
+                        <button class="modelsInfo--qtdmais">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modelsInfo--addButton" id="adicionacarrinho">Adicionar ao carrinho</div>
+            <div class="modelsInfo--cancelButton">Cancelar</div>
+        </div>
+    </div>
+
+    <!--Rodapé------------------------------------------------------------------------------------------------------>
+    <p>_______________________________________________________________________________________________________________________________________________________________________________________________
+
+    </p>
+    <footer>
+        <div id="quem">
+            <div id="foot2"> Quem somos nós?</div>
+            <p>Nossa empresa foi criada </p>
+            <p>com o intuito de aumentar o </p> 
+            <p>mercado de produtos</p>  
+            <p>ôrganicos além de incluir as</p> 
+            <p>pessoas com problemas de saúde</p>
+            <p> e precisam de alimentos mais</p> 
+            <p>saudáveis e nutritivos.</p>
+        </div>
+
+        <div id="fale">
+            <div id="foot"> Fale com a gente</div>
+            <p>
+                <img src="/imagens/chamada-telefonica.png" id="contatos"> (19) 99765-4332
+            </p>
+            <p>
+                <img src="/imagens/whatsapp.png" id="contatos"> (19) 99534-7865
+            </p>
+            <p>
+                <img src="/imagens/envelope.png" id="contatos"> foodtasty@gmail.com
+            </p>
+            <p>
+                <img src="/imagens/instagram.png" id="contatos"> @food_tasty
+            </p>
+            <p>
+                <img src="/imagens/facebook.png" id="contatos"> Food Tasty - Armazém
+            </p>
+        </div>
+
+        <div id="formas">
+            <div id="foot"> Formas de pagamento</div>
+            <p>
+                <img src="/imagens/pix.png" id="pagamento"> (19) 99765-4332
+            </p>
+
+            <p>
+                <img src="/imagens/visa.png" id="pagamento">  
+            </p>
+
+            <p>
+                <img src="/imagens/ourocard.png" id="pagamento"> 
+            </p>
+
+            <p>
+                <img src="/imagens/elo.png" id="pagamento"> 
+            </p>
+
+            <p>
+                <img src="/imagens/mastercard.png" id="pagamento"> 
+            </p>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
